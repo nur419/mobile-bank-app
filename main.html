@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main document </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-600">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-slate-50">
+        <header>
+            <nav class="flex justify-between items-center p-5">
+                <div>
+                    <img class="w-24" src="Payoo-MFS-Resources/payoo.png" alt="">
+                </div>
+              <div class="">
+                    <h3 class="text-4xl font-bold">$ <span id="main-money">45000</span></h3>
+                     <p class="text-[#080808] p-2">Available Balance</p>
+                 </div>
+                <button class="btn bg-green-500">Log Out</button>
+            </nav>
+        </header>
+        <hr>
+        <section class="p-3">
+            <h1 class="text-2xl text-black font-bold">🔥 Welcome to Payooo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            <div class="grid grid-cols-3 gap-5 mt-10">
+                <div id="add-money" class="border border-cyan-400 p-3 text-center rounded-lg  hover:bg-cyan-300">
+                    <img class="w-9 mx-auto m-3" src="Payoo-MFS-Resources/wallet 1.png" alt="">
+                    <p>Add Maney</p>
+                </div>
+                <div id="cash-out" class="border border-cyan-400 p-3 text-center rounded-lg  hover:bg-cyan-300">
+                    <img class="w-9 mx-auto m-3" src="Payoo-MFS-Resources/send 1.png" alt="">
+                    <p>CashOut</p>
+                </div>
+                <div class="border border-cyan-400 p-2 text-center rounded-lg  hover:bg-cyan-300">
+                    <img class="w-9 mx-auto m-3" src="Payoo-MFS-Resources/money 1.png" alt="">
+                    <p>Transfer Money</p>
+                </div>
+                <div class="border border-cyan-400 p-3 text-center rounded-lg  hover:bg-cyan-300">
+                    <img class="w-9 mx-auto m-3" src="Payoo-MFS-Resources/send 1.png" alt="">
+                    <p>Get Bonus</p>
+                </div>
+                <div class="border border-cyan-400 p-3 text-center rounded-lg  hover:bg-cyan-300">
+                    <img class="w-9 mx-auto m-3" src="Payoo-MFS-Resources/purse 1.png" alt="">
+                    <p>Pay Bill</p>
+                </div>
+                <div id="transaction-histoy" class="border border-cyan-400 p-3 text-center rounded-lg hover:bg-cyan-300">
+                    <img class="w-9 mx-auto m-3" src="Payoo-MFS-Resources/transaction 1.png" alt="">
+                    <p>Transactions</p>
+                </div>
+            </div>
+        </section>
+             <section id="add-money-hide" class="mt-20">
+                <label class="ml-9 font-bold text-2xl">Add Money</label>
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                       
+                        <form class="card-body">
+                        <!-- <label class="py-3">Add Money</label> -->
+                        <label class="py-3">Select A Bank</label>
+                        <select id="select-bank" class="select select-accent w-full max-w-xs">
+                            <option disabled selected>Select bank</option>
+                            <option value="Bikas">Bikas</option>
+                            <option value="naggod">naggod</option>
+                            <option value="rokect">rokect</option>
+                          </select>
+                         <div class="form-control">
+                           <label class="label">
+                             <span class="label-text">Bank Account Number</span>
+                           </label>
+                           <input id="input-name"  type="text" placeholder="Inter 11 digit account number" class="input input-bordered" required />
+                         </div>
+                         <div class="form-control">
+                           <label class="label">
+                             <span class="label-text">Amount to Add</span>
+                           </label>
+                           <input id="input-amount" type="text" placeholder="Add Amount to withdrow" class="input input-bordered" required />
+                         </div>
+                         <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="input-pin" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+                          </div>
+                         <div class="form-control mt-6">
+                           <button id="Login-button" class="btn bg-cyan-500 text-white">Add Money</button>
+                         </div>
+                       </form>
+                     </div>
+                   </div>
+             </section>
+             <section id="cash-out-hide" class="mt-20">
+                <label class="ml-9 font-bold text-2xl">Cash Out</label>
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                        <div class="form-control">
+                           <label class="label">
+                             <span class="label-text">Agent Number</span>
+                           </label>
+                           <input id="input-name"  type="text" placeholder="Inter 11 digit number" class="input input-bordered" required />
+                         </div>
+                         <div class="form-control">
+                           <label class="label">
+                             <span class="label-text">Amount</span>
+                           </label>
+                           <input id="amount" type="text" placeholder="Enter amount to withdrow" class="input input-bordered" required />
+                         </div>
+                         <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin Number</span>
+                            </label>
+                            <input id="input-pin" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+                          </div>
+                         <div class="form-control mt-6">
+                           <button id="cash-out-button" class="btn bg-cyan-500 text-white">Cash Out</button>
+                         </div>
+                       </form>
+                     </div>
+                   </div>
+             </section>
+
+             <section id="transaction" class="mt-20">
+               <h1 class="text-3xl p-5 text-green-500 text-center font-bold">Transactions Histroy</h1>
+              <div id="transaction-container" class="bg-cyan-300 border border-green-400 p-3">
+              </div>
+             </section>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="js/cash-out.js"></script>
+    <script src="js/troggle.js"></script>
+    <script src="js/trans.js"></script>
+</body>
+</html>
